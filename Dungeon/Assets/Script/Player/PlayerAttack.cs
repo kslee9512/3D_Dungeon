@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [Header("Player Stat")]
-    [SerializeField]
-    public int playerStr;
-    public int playerDex;
-    public int playerDef;
     /*
      추후 Stat클래스로 빠질 가능성 있음
      */ 
@@ -17,10 +12,12 @@ public class PlayerAttack : MonoBehaviour
 
 
     public NormalTarget normalTarget;
+    public PlayerStat playerStat;
     // Start is called before the first frame update
     void Start()
     {
         normalTarget = GameObject.Find("NormalAttackRange").GetComponent<NormalTarget>();
+        playerStat = GetComponent<PlayerStat>();
     }
 
     // Update is called once per frame
@@ -36,7 +33,7 @@ public class PlayerAttack : MonoBehaviour
             EnemyStat enemy = one.GetComponent<EnemyStat>();
             if (enemy != null)
             {
-                enemy.StartDamage(playerStr * normalAttackDmg);
+                enemy.StartDamage(playerStat.playerStr * normalAttackDmg);
             }
         }
     }

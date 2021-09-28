@@ -901,6 +901,7 @@ GameObject:
   m_Component:
   - component: {fileID: 203681512}
   - component: {fileID: 203681513}
+  - component: {fileID: 203681514}
   m_Layer: 5
   m_Name: HPBar
   m_TagString: Untagged
@@ -980,6 +981,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &203681514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203681511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8234e5501e8b9eb45af464b7e87a619f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpBar: {fileID: 203681513}
 --- !u!4 &206840360 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 7487e5e4c7555e34aa94609e2b1825f5, type: 3}
@@ -1074,6 +1088,7 @@ GameObject:
   m_Component:
   - component: {fileID: 259741579}
   - component: {fileID: 259741580}
+  - component: {fileID: 259741581}
   m_Layer: 5
   m_Name: XPBar
   m_TagString: Untagged
@@ -1153,6 +1168,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &259741581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259741578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18b31f2fc6e3811448baa33f227feb10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xpBar: {fileID: 259741580}
 --- !u!1 &259790195
 GameObject:
   m_ObjectHideFlags: 0
@@ -1943,8 +1971,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.21999979}
+  m_SizeDelta: {x: 0, y: -1.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &470744203
 MonoBehaviour:
@@ -4763,11 +4791,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f3d640ef38ec464e83abb3d048ae622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalAttackDmg: 15
+  normalTarget: {fileID: 0}
+  playerStat: {fileID: 0}
+--- !u!114 &1396707306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396707301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba275ed0cf4b62e40b4979d909f1d91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   playerStr: 5
   playerDex: 1
   playerDef: 1
-  normalAttackDmg: 15
-  normalTarget: {fileID: 0}
+  playerMaxHp: 100
+  playerMaxMp: 50
+  playerHp: 100
+  playerMp: 50
+  playerXp: 0
+  playerMaxXp: 350
+  playerLv: 1
 --- !u!1 &1450875754
 GameObject:
   m_ObjectHideFlags: 0
@@ -6954,8 +7002,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.5, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0.6}
+  m_Size: {x: 1, y: 0.7, z: 1}
+  m_Center: {x: 0, y: 0.4, z: 0.6}
 --- !u!114 &1920601768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7681,6 +7729,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2076310166}
   - component: {fileID: 2076310167}
+  - component: {fileID: 2076310168}
   m_Layer: 5
   m_Name: MPBar
   m_TagString: Untagged
@@ -7760,6 +7809,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2076310168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076310165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e001b6bfbf67da449c4e9ebcc751a88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mpBar: {fileID: 2076310167}
 --- !u!1 &2088395611
 GameObject:
   m_ObjectHideFlags: 0
